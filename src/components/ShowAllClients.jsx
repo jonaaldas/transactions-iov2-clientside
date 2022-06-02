@@ -32,7 +32,7 @@ function ShowAllClients() {
                       archiveTransactions(client._id)
                       toast.success('Transactions has been Archived')
                       // refreshPage()
-                      navigate('/transactions')
+                      navigate('/')
                     }}
                     className='edit-btn mx-2'
                   >
