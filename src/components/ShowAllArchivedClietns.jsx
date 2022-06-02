@@ -25,10 +25,27 @@ function ShowAllArchivedClietns() {
                     variant="secondary"
                     className='edit-btn mx-2'
                     onClick={() => {
-                      restoreASingleTransaction(client._id)
-                      toast.success('Transactions has un-Archived')
-                      refreshPage()
-                      navigate('/transactions')
+                      toast(t => (
+                        <div className='flex flex-col justify-content-center align-self-center
+                        '>
+                          <h6>Are you sure?</h6>
+                          <div>
+                            <Button
+                              className='mx-3'
+                              onClick={() => {
+                                restoreASingleTransaction(client._id)
+                                toast.success('Transactions has been un-Archived')
+                                refreshPage()
+                              }}
+                            >Yes</Button>
+                            <Button
+                              className='mx-3'
+                              onClick={() => toast.dismiss(t.id)}
+                            >No</Button>
+          
+                          </div>
+                        </div>
+                      ))
                     }}
                   >
                     Un-Archive
