@@ -9,7 +9,7 @@ export const createTransactionsRequest = async (post) => {
 }
 
 export const archiveTransactionRequest = async (id) => {
-  return await axios.delete('https://transactions-managment.herokuapp.com/transactions/' + id)
+  return await axios.delete('https://transactions-managment.herokuapp.com/transactions/archive' + id)
 }
 
 export const deleteTransactionRequest = async (id) => {
