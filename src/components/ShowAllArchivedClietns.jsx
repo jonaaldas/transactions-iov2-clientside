@@ -28,6 +28,7 @@ function ShowAllArchivedClietns() {
                       restoreASingleTransaction(client._id)
                       toast.success('Transactions has un-Archived')
                       refreshPage()
+                      navigate('/transactions')
                     }}
                   >
                     Un-Archive
