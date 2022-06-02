@@ -29,10 +29,26 @@ function ShowAllClients() {
                 <div className="buttons">
                   <Button
                       variant="danger" onClick={() => {
-                      archiveTransactions(client._id)
-                      toast.success('Transactions has been Archived')
-                      // refreshPage()
-                      navigate('/')
+                        toast(t => (
+                          <div className='flex flex-col justify-content-center align-self-center
+                          '>
+                            <h6>Are you sure?</h6>
+                            <div>
+                              <Button
+                                className='mx-3'
+                                onClick={() => {
+                                  archiveTransactions(client._id)
+                                  toast.success('Transactions has been Archived')
+                                  refreshPage()
+                                }}
+                              >Yes</Button>
+                              <Button
+                                className='mx-3'
+                                onClick={() => toast.dismiss(t.id)}
+                              >No</Button>
+                            </div>
+                          </div>
+                        ))
                     }}
                     className='edit-btn mx-2'
                   >

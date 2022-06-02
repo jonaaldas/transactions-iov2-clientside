@@ -42,7 +42,6 @@ function ShowAllArchivedClietns() {
                               className='mx-3'
                               onClick={() => toast.dismiss(t.id)}
                             >No</Button>
-          
                           </div>
                         </div>
                       ))
