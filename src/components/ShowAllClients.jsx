@@ -31,7 +31,7 @@ function ShowAllClients() {
                       variant="danger" onClick={() => {
                       archiveTransactions(client._id)
                       toast.success('Transactions has been Archived')
-                      refreshPage()
+                      // refreshPage()
                     }}
                     className='edit-btn mx-2'
                   >
