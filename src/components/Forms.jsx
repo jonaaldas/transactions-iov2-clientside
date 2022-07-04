@@ -41,7 +41,7 @@ function Forms() {
     <Formik
       initialValues={formValues}
       validationSchema={Yup.object({
-        transaction: Yup.string().required("Transaction is Required"),
+        transaction: Yup.string().oneOf(['Buyer', 'Seller']).required("Transaction is Required"),
         name: Yup.string().required('Name is Required'),
         phoneNumber: Yup.string().required('Phone Number is Required'),
         email: Yup.string().required('Email is Required'),
